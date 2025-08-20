@@ -4714,7 +4714,7 @@ pub struct ProtocolConfig {
 /// A signature from a user.
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct UserSignature {
-    /// This signature serialized as as BCS.
+    /// This signature serialized as BCS.
     ///
     /// When provided as input this will support both the form that is length
     /// prefixed as well as not length prefixed.
@@ -5032,12 +5032,12 @@ pub struct VerifySignatureRequest {
     /// message is being verified.
     #[prost(message, optional, tag = "1")]
     pub message: ::core::option::Option<Bcs>,
-    /// The siganture to verify.
+    /// The signature to verify.
     #[prost(message, optional, tag = "2")]
     pub signature: ::core::option::Option<UserSignature>,
     /// Optional. Address to validate against the provided signature.
     ///
-    /// If provided, this address will be compared against the the address derived
+    /// If provided, this address will be compared against the address derived
     /// from the provide signature and a successful response will only be returned
     /// if they match.
     #[prost(string, optional, tag = "3")]
@@ -5788,7 +5788,7 @@ pub struct SystemState {
     /// Nonrefundable storage fees accumulated during safe_mode
     #[prost(uint64, optional, tag = "14")]
     pub safe_mode_non_refundable_storage_fee: ::core::option::Option<u64>,
-    /// Unix timestamp of when this this epoch started
+    /// Unix timestamp of when this epoch started
     #[prost(uint64, optional, tag = "15")]
     pub epoch_start_timestamp_ms: ::core::option::Option<u64>,
     /// Any extra fields that's not defined statically.
@@ -5969,7 +5969,7 @@ pub struct Validator {
     /// uses to establish TLS connections
     #[prost(bytes = "bytes", optional, tag = "10")]
     pub network_public_key: ::core::option::Option<::prost::bytes::Bytes>,
-    /// The public key bytes correstponding to the Narwhal Worker
+    /// The public key bytes corresponding to the Narwhal Worker
     #[prost(bytes = "bytes", optional, tag = "12")]
     pub worker_public_key: ::core::option::Option<::prost::bytes::Bytes>,
     /// The network address of the validator (could also contain extra info such as port, DNS and etc.).
